@@ -37,3 +37,11 @@ keymap("n", "<leader>ce", "<cmd>CompetiTest edit_testcase<CR>", { desc = "CP: Ed
 keymap("n", "<leader>cd", "<cmd>CompetiTest delete_testcase<CR>", { desc = "CP: Delete testcase" })
 keymap("n", "<leader>cp", "<cmd>CompetiTest receive problem<CR>", { desc = "CP: Listen for browser problem" })
 keymap("n", "<leader>cc", "<cmd>CompetiTest receive contest<CR>", { desc = "CP: Listen for full contest" })
+
+-- Maps Ctrl+k directly in Insert mode to expand or jump
+vim.keymap.set({"i", "s"}, "<C-k>", function()
+  local ls = require("luasnip")
+  if ls.expand_or_jumpable() then
+    ls.expand_or_jump()
+  end
+end, { silent = true })
