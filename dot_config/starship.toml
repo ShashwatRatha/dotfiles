@@ -1,0 +1,147 @@
+add_newline = true
+command_timeout = 100
+
+# Left prompt layout
+format = """
+[╭─](bold #f2f4f8)[$username$shell$hostname](bold green) : [$directory](bold blue)$git_branch$git_status
+[╰───](bold #f2f4f8)$status$character"""
+
+# Right prompt layout: Displays execution time + exit status
+right_format = """$cmd_duration"""
+
+[username]
+style_user = "bold #00c15a"
+format = "[$user]($style)"
+show_always = true
+
+[shell]
+disabled = false
+bash_indicator = "bash"
+zsh_indicator = "zsh"
+fish_indicator = "fish"
+unknown_indicator = "?"
+format = '[\[$indicator\]]($style)'
+style = "bold #eebebe"
+
+[hostname]
+ssh_only = false
+format = "[@](#f2f4f8)[$hostname]($style)"
+style = "bold #00dfdb"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold #ff8373"
+format = "[$path]($style)[$read_only]($read_only_style)"
+read_only = " 🔒"
+read_only_style = "bold #ff8373"
+
+[git_branch]
+symbol = " "
+style = "bold #c693ff"
+# Fixed separator and proper styling syntax
+format = " : [$symbol$branch]($style)"
+
+[git_status]
+style = "bold #ff4297"
+format = "([ $all_status$ahead_behind]($style))"
+conflicted = "="
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count}"
+stashed = "\\$${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+
+[character]
+success_symbol = "[❯❯❯](bold #f2f4f8)"
+error_symbol = "[❯❯❯](bold #f2f4f8)"
+vimcmd_symbol = "[■](bold #f2f4f8)"
+
+[status]
+disabled = false
+# $symbol renders the '✘ ', $int renders the numerical exit code (e.g., 1, 127, 130)
+symbol = "✘ "
+style = "bold #ff74b8"
+format = '[ \[$symbol$int\] ]($style)'
+
+[cmd_duration]
+format = "[took $duration]($style)"
+style = "bold #be95ff"
+show_notifications = false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
