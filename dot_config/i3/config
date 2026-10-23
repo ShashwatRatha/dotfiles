@@ -228,7 +228,7 @@ bar {
         mode invisible
 }
 
-exec_always --no-startup-id feh --bg-fill ~/Downloads/wallpaper.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/cow.jpg
 
 exec_always --no-startup-id xinput set-prop 7 367 1
 exec_always --no-startup-id xinput set-prop 7 333 1
